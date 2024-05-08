@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patient 
+    xmlns:med='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:act="http://www.ujf-grenoble.fr/l3miage/actes" 
+    xmlns='http://www.ujf-grenoble.fr/l3miage/medical'
+    med:schemaLocation='http://www.ujf-grenoble.fr/l3miage/medical ../xsd/patient.xsd'> 
+    <nom>Kapoëtla</nom>
+    <prénom>Xavier</prénom>
+    <sexe>M</sexe>
+    <naissance>2011-08-02</naissance>
+    <numéroSS>111083306303521</numéroSS>
+    <adresse>
+        <rue>Rue des Martyrs</rue>
+        <codePostal>38042</codePostal>
+        <ville>Grenoble</ville>
+    </adresse>
+    <visite date="2015-12-08">
+        <intervenant>
+            <nom>Stické</nom>
+            <prénom>Sophie</prénom>
+        </intervenant>
+        <acte>
+            Elaboration de la démache de soins infirmiers à domicile, planification 
+            des soins et rédaction du résumé de la démarche de soins infirimiers.
+        </acte>
+    </visite>
+</patient>

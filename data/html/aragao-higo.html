@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+  <head>
+        <title>Meu Currículo</title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+        <style type="text/css">
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            body{
+                font-family: Roboto;
+                font-weight: 300;
+                font-size: .9rem;
+                line-height: 1.5;
+            }
+
+            a{
+                text-decoration: none;
+                color: #4472C4;
+            }
+
+            a:hover{
+                text-decoration: underline;
+            }
+
+            p{
+                margin: 0 0 1rem;
+            }
+
+            h1{
+                margin: 0 0 1rem;
+                font-size: 2.5rem;
+                margin-bottom: .5rem;
+            }
+
+            h2{
+                margin: 0 0 1rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .text-rouge{
+                color: brown;
+            }
+
+            .text-darkblue{
+                color: #002060;
+            }
+
+            .text-uppercase{
+                text-transform: uppercase;
+            }
+
+            .icon{
+                margin-right: .5rem;
+            }
+
+            .cv-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: "left-column right-column right-column";
+                width: 1200px;
+                margin: 100px auto;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            }
+
+            .section{
+                margin-bottom: 1.5rem;
+            }
+
+            /* Section de Col gauche*/
+            .col-gauche{
+                grid-area: left-column;
+                padding: 50px;
+                background-color: #F2F2F2;
+                color: black;
+            }
+
+            .col-gauche h2{
+                color: brown;
+                font-size: 16px;
+            }
+
+            .portait{
+                border-radius: 50%;
+                max-width: 150px;
+                margin: auto;
+                display: block;
+                margin-bottom: 50px;
+            }
+
+            .gly{
+                display: flex;
+                align-items: unset;
+                gap: 10px;
+                font-size:  15px;
+            }
+
+            .gly i{
+                color: brown;
+            }
+
+            .ligne-gauche{
+                margin-bottom: 20px;
+            }
+
+            .qualite{
+                list-style-type: none;
+                padding: 0;
+                font-size: 1.1rem;
+                letter-spacing: 1px;
+                margin: 0 0 1rem;
+            }
+
+            /* Col droite*/
+            .col-droite{
+                grid-area: right-column;
+                display: grid;
+                grid-template-rows: 250px 1fr;
+                grid-template-areas:"header" "content";
+            }
+
+            /* HEADER */
+            .header{
+                grid-area: header;
+                padding: 50px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .infos{
+                columns: 2;
+                list-style-type: none;
+                padding: 0;
+            }
+
+            /* CONTENT */
+            .content{
+                grid-area: content;
+                padding: 50px;
+            }
+
+            .experience-list{
+                list-style-type: circle;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cv-container">
+            <div class="col-gauche">
+                
+                <img class="portait" src="data:image/jpeg;base64,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" />
+
+                <div class="section">
+                    <h2>Informations Personnelles</h2>
+                    <hr class="ligne-gauche"/>
+                    <div class="gly"><i class="fa fa-envelope"></i><p><strong>higomedeirosz@gmail.com</strong></p></div>
+                    <div class="gly"><i class="fa fa-phone"></i><p><strong>+33 07 50042101</strong></p></div>
+                    <div class="gly"><i class="fa fa-home"></i><p><strong>Cobas 69960</strong></p></div>
+                </div>
+                <div class="section">
+                    <h2>COMPÉTENCES</h2>
+                    <hr class="ligne-gauche"/>
+                    <ul class="qualite">
+                        <li>test</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Langues</h2>
+                    <hr class="ligne-gauche"/>
+                    <p>
+                        Niveau B2 Frances
+                    </p>
+                    <p>
+                        Portugais Maternaille
+                    </p>
+                </div>
+                <div class="section">
+                    <h2>Centres d'intérêt</h2>
+                    <hr class="ligne-gauche"/>
+                    <p>
+                        Jeux vidéo, Sport, Informatique en général
+                    </p>
+                </div>
+            </div>
+            <div class="col-droite">
+                <div class="header">
+                    <h1><span class="text-rouge text-uppercase">Higo Medeiros</span></h1>
+                    
+                    <p>Etudiant</p>
+                    
+                    <p><a href="cvCire.html">Le CV de mon Binome Keita Ciré </a></p>
+                </div>
+                <div class="content">
+                    <div class="section">
+                        <h2><span class="text-rouge">Formations</span></h2>
+                        <hr/>
+                        <ul>
+                            <li><b>MÉTHODES INFORMATIQUES APPLIQUÉES À LA GESTION DES ENTREPRISES - <a href="https://www.univ-grenoble-alpes.fr/">Universite Grenoble Alpes.</a> | 2021 - Présent</b>
+
+                                Adapter et apprendre à gérer des systèmes dinformation, analyser la situation dune entreprise et adapter son système dinformation pour répondre à ses besoins, la programmation orientée objets et la
+                                formalisation des données
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <h2><span class="text-rouge">EXPERIENCES</span></h2>
+                        <hr/>
+                        <ul>
+                            <li><b>PREPARATEUR DE COMANDES - STEF Logistique | 2022 - Présent</b>
+                                ·	Agilité : Agilité pour préparer les commandes de manière rapide et efficace, en garantissant la précision et la qualité.
+
+                                ·	Coordination du Temps : Capacité à coordonner efficacement le temps, en veillant à ce que toutes les commandes soient préparées et expédiées
+                                dans les délais.
+
+                                ·	Attention aux Détails : Une attention méticuleuse aux détails pour sassurer que chaque commande est correctement préparée, minimisant les erreurs
+                                et améliorant la satisfaction du clien
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2><span class="text-rouge">EXPERIENCES PROFESSIONELLES</span></h2>
+                        <p>
+                            Permis A et B
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:med="http://www.ujf-grenoble.fr/l3miage/medical"
+           targetNamespace="http://www.ujf-grenoble.fr/l3miage/medical"
+           elementFormDefault="qualified">
+    
+    <xs:element name="patient" type="med:Patient"/>
+    
+    
+     <!-- Type : Patient -->  
+    <xs:complexType name="Patient">
+        <xs:sequence>
+            <xs:element name="nom" minOccurs="1" maxOccurs="1" type="med:Nom"/>
+            <xs:element name="prénom" minOccurs="1" maxOccurs="1" type="med:Nom"/>
+            <xs:element name="sexe" minOccurs="1" maxOccurs="1" type="med:Sexe"/>
+            <xs:element name="naissance" minOccurs="1" maxOccurs="1" type="xs:date"/>
+            <xs:element name="numéroSS" minOccurs="1" maxOccurs="1" type="med:Sécu"/>
+            <xs:element name="adresse" minOccurs="1" maxOccurs="1" type="med:Adresse"/>
+            <xs:element name="visite" minOccurs="1" maxOccurs="unbounded" type="med:Visite"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    
+     <!-- Type : NOm et prénom -->  
+    <xs:simpleType name="Nom">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-zÀ-ÿ\s-]+" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+
+
+     <!-- Type : Sexe -->  
+    <xs:simpleType name="Sexe">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="M"/>
+            <xs:enumeration value="F"/>
+        </xs:restriction>
+    </xs:simpleType>    
+
+    
+    
+     <!-- Type : Sécurité sociale -->  
+    <xs:simpleType name="Sécu">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="13"/>
+        </xs:restriction>
+    </xs:simpleType> 
+       
+    
+    
+     <!-- Type : Adresse du patient -->  
+    <xs:complexType name="Adresse">
+        <xs:sequence>
+            <xs:element name="rue" minOccurs="1" maxOccurs="1" type="med:Nom"/>
+            <xs:element name="codePostal" minOccurs="1" maxOccurs="1" type="med:CodePostal"/> 
+            <xs:element name="ville" minOccurs="1" maxOccurs="1" type="med:Nom"/>       
+        </xs:sequence>
+    </xs:complexType>
+
+
+     <!-- Type : Code postal -->  
+    <xs:simpleType name="CodePostal">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="5"/>
+        </xs:restriction>
+    </xs:simpleType> 
+    
+    
+    
+     <!-- Type : Visite -->  
+    <xs:complexType name="Visite">
+        <xs:sequence>
+            <xs:element name="intervenant" minOccurs="1" maxOccurs="1" type="med:Intervenant"/>
+            <xs:element name="acte" minOccurs="1" maxOccurs="unbounded" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="date" use="required" type="xs:date"/>
+    </xs:complexType>
+
+    
+    
+     <!-- Type : Intervenant -->  
+    <xs:complexType name="Intervenant">
+        <xs:sequence>
+            <xs:element name="nom" minOccurs="1" maxOccurs="1" type="med:Nom"/>
+            <xs:element name="prénom" minOccurs="1" maxOccurs="1" type="med:Nom"/>
+        </xs:sequence>
+    </xs:complexType>    
+    
+    
+</xs:schema>

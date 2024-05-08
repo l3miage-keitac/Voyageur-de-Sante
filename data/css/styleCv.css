@@ -1,0 +1,68 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 18 sept. 2023, 21:09:34
+    Author     : cirekeita
+*/
+
+@charset "UTF-8";
+
+#global
+{
+    border: 1px;
+    color: black;
+    
+}
+#entete
+{
+    background: #ff3333;
+    border: 1px solid #999999;
+    height: 90px;
+    margin: 5px;
+    padding: 5px;
+}
+
+#center-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 11.7pt;
+    font-family: Archivo Black;
+    margin-left: 15px;
+}
+
+
+#gauche
+{
+    width: 220px;
+    height: 1122.93px;
+    min-height: 600px;
+    float: left;
+    background: #cccccc;
+}
+
+#droite
+{
+    margin-left: 220px;
+    height: 1122.93px;
+    background: white;
+   
+    
+}
+@page {
+  size: A4; 
+  margin: 37px; /* Marge autour de la page */
+}
+
+body {
+  size: A4; 
+  width: 793.7px;
+  height: 1122.93px;
+  margin: 37px;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  background-color: #d4ddd4;
+}
+
+

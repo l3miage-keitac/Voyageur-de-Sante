@@ -1,0 +1,31 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 30 nov. 2023, 02:32:18
+    Author     : cirekeita
+*/
+body {
+    display: block;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+    background-color: #e8dfdf;
+}
+
+p {
+    display: block;
+    margin-left: 250px;
+    margin-right: 250px;
+    text-align: center;
+    
+}
+
+h3 {
+    display: block;
+    margin-left: 250px;
+    margin-right: 250px;
+    text-align: center;
+    
+}

@@ -1,0 +1,65 @@
+<html xmlns:act="http://www.ujf-grenoble.fr/l3miage/actes" xmlns:med="http://www.ujf-grenoble.fr/l3miage/medical">
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Visites des Patients</title>
+        <link rel="stylesheet" type="text/css" href="../css/cabinetPage.css">
+        <script type="text/javascript" src="../js/facture.js"></script><script type="text/javascript" src="../js/buttonScript.js"></script>
+    </head>
+    <body>
+        <br>
+        <br>
+        <p>
+            Bonjour 
+                    
+                    <b>Sarah,</b>
+        </p>
+        <p>Aujourd'hui, vous avez
+                     
+                    2 
+                    patients 
+                </p>
+        <p>
+            <h3>Visites du jour :</h3>
+        </p>
+        <center>
+            <table border="1" bgcolor="#CCCCCC">
+                <tr>
+                    <th>Nom</th><th>Adresse</th><th>Soins</th><th>Facture</th>
+                </tr>
+                <tr>
+                    <td>Al&eacute;cole</td><td>
+                    Etage n&deg; 6,
+                      50 avenue F&eacute;lix Viallet, 
+                 Grenoble,
+                 38031</td><td>
+                        <li>
+            Injection sous-cutan&eacute;e.
+        </li>
+                    </td><td><input type="button" value="Facture" onclick="
+                        openFacture('Yvon',
+                        'Al&eacute;cole',
+                        '109 ')
+                    "></td>
+                </tr>
+                <tr>
+                    <td>Orouge</td><td>
+                    Etage n&deg; 3,
+                        Rond-Point de la Croix de Vie, 
+                 La Tronche,
+                 38700</td><td>
+                        <li>
+            Inection intraveineuse directe isol&eacute;e.
+        </li>
+                        <li>
+            Injection sous-cutan&eacute;e.
+        </li>
+                    </td><td><input type="button" value="Facture" onclick="
+                        openFacture('Elvire',
+                        'Orouge',
+                        '104 109 ')
+                    "></td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>
